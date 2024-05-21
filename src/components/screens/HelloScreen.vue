@@ -1,8 +1,8 @@
 <template>
   <div ref="container" class="relative flex flex-col">
     <canvas ref="cnv" class="canvas self-center sticky top-0 -z-10"></canvas>
-    <div class="content -mt-[100vh] text-white flex flex-col items-center xl:items-end">
-        <div class="h-screen flex items-center p-4 lg:p-12">
+    <div class="content -mt-[100dvh] text-white flex flex-col items-center xl:items-end">
+        <div class="h-dvh flex items-center p-4 lg:p-12">
           <h1 class="text-4xl md:text-7xl xl:text-9xl uppercase text-transparent text-stroke-light xl:text-stroke font-nasalization">Perseverance</h1>
         </div>
         <div class="description self-center lg:self-end text-2xl lg:text-4xl w-full xl:w-8/12 mb-[110vh] bg-gray-500/40 p-4 lg:p-12 *:indent-8 text-justify">
