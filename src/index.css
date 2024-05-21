@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Nasalization';
+    src: url('assets/nasalization-rg.ttf');
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 4px white;
+  }
+  .text-stroke-light {
+    -webkit-text-stroke: 1px white;
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 1px black;
+  }
+}
+
+.homeview {
+  background: black;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* * {
+  outline: 1px solid red;
+} */
