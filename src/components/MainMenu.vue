@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-transparent">
     <ul class="flex flex-row">
       <li v-for="menuItem in menuItems">
         <MenuItem :title="menuItem.title" :link="menuItem.link"/>

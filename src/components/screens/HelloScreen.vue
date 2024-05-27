@@ -20,6 +20,7 @@
 import { onMounted, ref } from 'vue';
 
 const container = ref(null);
+const cnv = ref(null);
 
 onMounted(() => {
   handleScroll();
@@ -28,8 +29,7 @@ onMounted(() => {
 
 function handleScroll() {
   
-  const cnv = document.querySelector('canvas');
-  const ctx = cnv.getContext('2d');
+  const ctx = cnv.value.getContext('2d');
 
   const frameCount = 67;
   const currentFrame = (index) => (
@@ -57,8 +57,8 @@ function handleScroll() {
 
   const img = new Image()
   img.src = currentFrame(1);
-  cnv.width = document.querySelector('html').clientWidth;
-  cnv.height = document.querySelector('html').clientHeight;
+  cnv.value.width = document.querySelector('html').clientWidth;
+  cnv.value.height = document.querySelector('html').clientHeight;
   img.onload = function(){
     cover(img);
   }
@@ -81,8 +81,8 @@ function handleScroll() {
   });
 
   window.addEventListener('resize', () => {
-    cnv.width = document.querySelector('html').clientWidth;
-    cnv.height = document.querySelector('html').clientHeight;
+    cnv.value.width = document.querySelector('html').clientWidth;
+    cnv.value.height = document.querySelector('html').clientHeight;
     cover(img);
   });
 
